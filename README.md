@@ -1,1 +1,10 @@
-# Data_Structure_And_Algorithms_Batch_2
+# Data Structure And Algorithms Classes (Batch - 2)
+
+## Prerequisite
+ - Pointers
+ - Array
+ - Storage Classes And Memory Allocation
+ - Classes
+ - Template Classes & Functions
+
+
