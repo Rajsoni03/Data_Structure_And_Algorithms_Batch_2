@@ -1,10 +1,3 @@
 # Data Structure And Algorithms Classes (Batch - 2)
 
-## Prerequisite
- - Pointers
- - Array
- - Storage Classes And Memory Allocation
- - Classes
- - Template Classes & Functions
-
-
+## 01 - [Prerequisite](/01%20-%20Prerequisite/README.md)

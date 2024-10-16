@@ -16,9 +16,9 @@ int main (){
 // # intgers
 // short - 2 byte 
 // int   - 4 byte
-// long  - 4/8 byte (compiler)
+// long  - 4/8 byte (compiler dependent)
 // long long - 8 byte
 
 // # floating 
 // float - 4 byte
-// double - 8 byte
+// double - 8 bytes
