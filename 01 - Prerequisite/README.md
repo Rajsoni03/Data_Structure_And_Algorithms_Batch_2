@@ -11,6 +11,6 @@
  - [D.cpp](D.cpp) : Class and this pointer
 
 ### Template Classes & Functions
-
+ - covering in array  
 ### Storage Classes And Memory Allocation
-
+ - covering in array  
