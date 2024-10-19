@@ -77,9 +77,7 @@ public:
 
 int main (){
 	Array arr = {10, 20, 30, 40};
-	Array arr2;
-	
-	arr2 = arr;
+	Array arr2(arr);
 	
 	int size = arr.size();
 	cout << size << endl;

@@ -97,7 +97,6 @@ int main (){
 	// arr2 = arr; // same as arr2.operator=(arr);
 	arr2.operator=(arr);
 	
-	
 	int size = arr.size();
 	cout << size << endl;
 
