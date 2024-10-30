@@ -8,9 +8,9 @@ private:
 		int data;
 		Node *next;
 		
-		Node(int data) {
+		Node(int data, Node *next=nullptr) {
 			this->data = data;
-			this->next = nullptr;
+			this->next = next; // nullptr 
 		}
 	};
 	Node* head;
@@ -21,9 +21,11 @@ public:
 	}
 	
 	void push_front(int value){
-		Node * n = new Node(value);
-		n->next = this->head;
-		head = n;
+		// Node * n = new Node(value);
+		// n->next = this->head;
+		// head = n;
+		
+		this->head = new Node(value, this->head); 
 	}
 	
 	void print(){
@@ -33,11 +35,9 @@ public:
 			cout << curr->data << endl;
 			curr = curr->next;
 		}
-		
-		//      N1    N2    N3    
-		// H -> 30 -> 20 -> 10 -> nullptr
-		//                          c^
 	}
+	
+	
 };
 
 int main() {
@@ -53,5 +53,6 @@ int main() {
 	
 	cout << "Working" << endl;
 	
+	// Homework
 	return 0;
 }
