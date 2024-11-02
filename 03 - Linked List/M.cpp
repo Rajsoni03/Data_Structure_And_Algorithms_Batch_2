@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 class LinkedList {
@@ -60,9 +62,10 @@ public:
 		}
 	}
 	
-	int length(){
-		// Time Complexity = O(1)
-		return this->_size;
+	void pop_front(){
+		Node* temp = head;
+		head = head->next;
+		delete temp;
 	}
 	
 };
@@ -70,19 +73,23 @@ public:
 int main() {
 	LinkedList list;
 	
-	list.push_back(1000);
-	list.push_front(10);
-	list.push_front(20);
-	list.push_front(30);
-	list.push_front(40);
-	list.push_front(50);
-	list.push_back(100);
-	list.push_back(200);
-	list.push_back(300);
-	list.push_front(5);
+	list.push_back(1);
+	list.push_back(2);
+	list.push_back(3);
+	list.push_back(4);
+	list.push_back(5);
+	list.push_back(6);
+	list.push_back(7);
+	list.push_back(8);
+	list.push_back(9);
+	list.push_back(10);
+	
+	list.pop_front();
+	list.pop_front();
+	list.pop_front();
 	
 	list.print();
 	
-	cout << "Size is : " << list.length() << endl;
+	cout << "Working" << endl;
 	return 0;
 }

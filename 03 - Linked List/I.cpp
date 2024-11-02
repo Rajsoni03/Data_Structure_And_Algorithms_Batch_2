@@ -86,7 +86,5 @@ int main() {
 	list.print();
 	
 	cout << "Size is : " << list.length() << endl;
-	
-	// Homework
 	return 0;
 }

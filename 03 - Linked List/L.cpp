@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 class LinkedList {
@@ -60,9 +62,23 @@ public:
 		}
 	}
 	
-	int length(){
-		// Time Complexity = O(1)
-		return this->_size;
+	int element_from_last(int index_from_last){ // 2
+		// H -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> nullptr;
+		//                                         ^
+		
+		Node* slow = head;
+		Node* fast = head;
+		
+		while(index_from_last-- > -1){
+			fast = fast->next;
+		}
+		
+		while(fast){
+			fast = fast->next;
+			slow = slow->next;
+		}
+		
+		return slow->data; // 8
 	}
 	
 };
@@ -70,19 +86,21 @@ public:
 int main() {
 	LinkedList list;
 	
-	list.push_back(1000);
-	list.push_front(10);
-	list.push_front(20);
-	list.push_front(30);
-	list.push_front(40);
-	list.push_front(50);
-	list.push_back(100);
-	list.push_back(200);
-	list.push_back(300);
-	list.push_front(5);
+	list.push_back(1);
+	list.push_back(2);
+	list.push_back(3);
+	list.push_back(4);
+	list.push_back(5);
+	list.push_back(6);
+	list.push_back(7);
+	list.push_back(8);
+	list.push_back(9);
+	list.push_back(10);
 	
 	list.print();
 	
-	cout << "Size is : " << list.length() << endl;
+	cout << "Element is : "  << list.element_from_last(9) << endl;
+	
+	cout << "Working" << endl;
 	return 0;
 }

@@ -71,12 +71,8 @@ int main() {
 	list.push_back(300);
 	list.push_front(5);
 	
-	
-	
 	list.print();
 	
 	cout << "Working" << endl;
-	
-	// Homework
 	return 0;
 }

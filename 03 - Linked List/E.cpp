@@ -8,9 +8,9 @@ private:
 		int data;
 		Node *next;
 		
-		Node(int data, Node *next=nullptr) {
+		Node(int data) {
 			this->data = data;
-			this->next = next; // nullptr 
+			this->next = nullptr;
 		}
 	};
 	Node* head;
@@ -21,26 +21,9 @@ public:
 	}
 	
 	void push_front(int value){
-		head = new Node(value, this->head); 
-	}
-	
-	void push_back(int value){
-		// Time Complexity = O(n)
-		
-		if (head==nullptr){
-			head = new Node(value);
-		}
-		else{
-			// find the last element
-			Node * curr = head;
-			while(curr->next != nullptr){
-				curr = curr->next;
-			}
-			
-			// create new node
-			// point last->next to new node
-			curr->next = new Node(value);
-		}
+		Node * n = new Node(value);
+		n->next = this->head;
+		head = n;
 	}
 	
 	void print(){
@@ -52,24 +35,29 @@ public:
 		}
 	}
 	
+	int at(int index){
+		Node* curr = this->head;
+		
+		while(index-- && curr){ 
+			curr = curr->next;
+		}
+		
+		if (!curr) return -1;
+		
+		return curr->data;
+	}
 };
 
 int main() {
 	LinkedList list;
-	
-	list.push_back(1000);
 	
 	list.push_front(10);
 	list.push_front(20);
 	list.push_front(30);
 	list.push_front(40);
 	list.push_front(50);
-	list.push_back(100);
-	list.push_back(200);
-	list.push_back(300);
-	list.push_front(5);
 	
-	list.print();
+	cout << list.at(2) << endl;
 	
 	cout << "Working" << endl;
 	return 0;

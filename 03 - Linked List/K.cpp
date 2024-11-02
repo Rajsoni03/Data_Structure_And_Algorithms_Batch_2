@@ -69,10 +69,16 @@ public:
 		
 		// Odd
 		// H -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> nullptr;
-		//                          S                   F ??
+		//                          S                   F 
 		
-		// Homework
+		Node* slow = head;
+		Node* fast = head;
 		
+		while(fast and fast->next){
+			slow = slow->next;
+			fast = fast->next->next;
+		}
+		return slow->data;
 	}
 	
 };
@@ -97,7 +103,5 @@ int main() {
 	cout << "Mid element is : "  << list.mid_element() << endl;
 	
 	cout << "Working" << endl;
-	
-	// Homework
 	return 0;
 }

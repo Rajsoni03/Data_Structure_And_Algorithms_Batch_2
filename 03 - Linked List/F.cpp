@@ -36,8 +36,6 @@ public:
 			curr = curr->next;
 		}
 	}
-	
-	
 };
 
 int main() {
@@ -52,7 +50,5 @@ int main() {
 	list.print();
 	
 	cout << "Working" << endl;
-	
-	// Homework
 	return 0;
 }
