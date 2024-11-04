@@ -25,3 +25,5 @@
 |  2  | Convert Binary Number in a Linked List to Integer | [LeetCode](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer) | [solution](Solutions/sol_02.md) |
 |  3  | Remove Duplicates from Sorted List | [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [solution](Solutions/sol_03.md) |
 |  4  | Delete Node in a Linked List | [LeetCode](https://leetcode.com/problems/delete-node-in-a-linked-list/) | [solution](Solutions/sol_04.md) |
+|  5  | Reverse Linked List | [LeetCode](https://leetcode.com/problems/reverse-linked-list/) | [solution](Solutions/sol_05.md) |
+
